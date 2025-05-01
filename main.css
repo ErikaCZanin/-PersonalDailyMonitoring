@@ -130,8 +130,102 @@ h3 {
     text-align: center;
 }
 
-.valueEntrada,
-.valueSaida {
+.pagEntrada {
+    position: absolute;
+    display: flex;
+    background-color: aqua;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 540px;
+    width: 800px;
+    left: 25%;
+    border-radius: 8px;
+}
+
+.cadastroEntrada {
+    width: 40%;
+    padding: 30px;
+}
+
+form button {
+    border-radius: 8px;
+    padding: 8px;
+    text-align: center;
+}
+
+.mensagemEntrada {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    background-color: rgb(41, 172, 172);
+    height: 540px;
+    border-radius: 8px 80px 8px 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cadadastros {
+    background-color: white;
+    padding: 20px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    min-width: 150px;
+    border-top-right-radius: 18px;
+}
+
+.icon {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    bottom: 58px;
+    left: 0;
+    border-bottom-left-radius: 30px;
+    box-shadow: -5px 9px 0 5px floralwhite;
+}
+
+.cadadastros img {
+    border-radius: 50%;
+}
+
+.iconInferiordireito 
+{
+   
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    bottom: 0;
+    left: 190px;
+    border-bottom-left-radius: 30px;
+    box-shadow: -5px 9px 0 5px floralwhite;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8px;
+}
+
+input {
+    margin: 4px;
+}
+
+button {
+    margin-top: 14px;
+}
+
+.mensagemEntrada {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: none;
+}
+
+.valuesEntrada,
+.valuesSaida {
     width: 100%;
     display: flex;
     align-items: center;
@@ -173,4 +267,47 @@ h5 {
     align-items: center;
     padding: 8px;
     gap: 50px;
+}
+
+.box {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-circle svg {
+    width: 150px;
+    height: 150px;
+    position: relative;
+}
+
+circle {
+    width: 150px;
+    height: 150px;
+    fill: none;
+    stroke: black;
+    stroke-width: 10;
+    transform: translate(5px,5px);
+    stroke-dasharray: 440;
+    stroke-dashoffset: 330;
+}
+
+circle:nth-child(1) {
+    stroke-dashoffset: 0;
+    stroke: rgb(41, 172, 41);
+}
+
+circle:nth-child(2) {
+    stroke: rgb(186, 27, 27);
+    transition: stroke-dashoffset 0.8;
+}
+
+.number {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white
+    ;
 }

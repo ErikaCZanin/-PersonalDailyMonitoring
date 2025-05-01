@@ -7,6 +7,33 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="pagEntrada">
+        <div class="mensagemEntrada">
+            <h1>Bem vindo!</h1>
+            <div class="cadadastros">
+                +34 cadastros
+                <img src="https://placehold.co/50x50/EEE/31343C" alt="imgWeather">
+            </div>
+            <div class="icon"></div>
+            <div class="iconInferiordireito"></div>
+        </div>
+        <div class="cadastroEntrada">
+            <p>Agora iniciará uma trajetoria pessoal, aproveite!</p>
+        <h5>Agora vamos saber um pouco mais sobre você</h5>
+        <form> 
+            <label for="nameU">Seu nome</label>
+            <input type="text" name="nameU" id="nameU">
+
+            <label for="numberEntrada">Total que recebeu</label>
+            <input type="number" name="numberEntrada" id="numberEntrada">
+        
+            <label for="numberSaida">Total que saiu</label>
+            <input type="number" name="numberSaida" id="numberSaida">
+        
+            <button type="button" onclick="go()">Cadastro</button>
+        </form> 
+        </div>       
+    </div>
     <div class="container">
     <div class="introPerfil">
             <div class="introData">
@@ -26,12 +53,27 @@
         <h4>Prophet's month of birth</h4>
     </div>
     <div class="cardFinanca card">
-        <img src="https://placehold.co/150x150/EEE/31343C" alt="imgFinanca">
+        <div class="box">
+            <div class="box-circle">
+                <svg>
+                    <circle cx="70" cy="70" r="70"></circle>
+                    <circle id="circleProgress" cx="70" cy="70" r="70"></circle>
+                </svg>
+            </div>
+            <div class="number">
+            </div>
+        </div>
         <div class="values">
         <h1>18.000</h1>
         <div class="value">
-        <div class="valueEntrada"><h3>Entrada</h3>122</div>
-        <div class="valueSaida"><h3>Saida</h3>1400</div>
+        <div class="valuesEntrada">
+            <h3>Entrada</h3>
+            <div class="valueEntrada"></div>
+        </div>
+        <div class="valuesSaida">
+            <h3>Saida</h3>
+            <div class="valueSaida"></div>
+        </div>
         </div>
         </div>
     </div>
@@ -72,4 +114,5 @@
     </div>
     </div>
 </body>
+<script src="./main.js"></script>
 </html>
