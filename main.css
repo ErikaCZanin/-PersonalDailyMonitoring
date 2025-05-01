@@ -1,0 +1,176 @@
+html, body {
+    margin-top: 34px;
+    padding: 0;
+    height: auto;
+}
+
+h4,
+h3 {
+    margin: 0;
+}
+
+/*center geral*/
+
+.introPerfil,
+.introText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+    "introPerfil introPerfil"
+    "menu-motivacao menu-acomp"
+    "nav nav";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 170px 400px 60px;
+    background-color: blue;
+    height: 100%;
+    margin: 0 40px;
+    gap: 8px;
+}
+
+.cardWeather {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    min-height: 170px;
+}
+
+.weather,
+.degree {
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.weather {
+    min-width: 50%;
+}
+
+.degree {
+    min-width: 30%;
+}
+
+.card {
+    border-radius: 8px;
+}
+
+.introPerfil {
+    grid-area: introPerfil;
+    border-radius: 8px;
+    padding: 0 8px;
+}
+
+.introPerfil h1{
+    margin: 0;
+}
+
+.menu-motivacao {
+    grid-area: menu-motivacao;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+.menu-acomp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: menu-acomp;
+    gap: 30px;
+    justify-content: center;
+}
+.nav {
+    background-color: pink;
+    grid-area: nav;
+}
+
+.introPerfil {
+    background-color: aliceblue;
+}
+
+.introData {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.introData img {
+    border-radius: 50%;
+    margin-top: -90px;
+}
+
+.motivacaoMensagem {
+    padding: 8px 20px;
+    background-color: aquamarine;
+}
+
+.cardFinanca {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: blueviolet;
+}
+
+.values {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.values h1 {
+    text-align: center;
+}
+
+.valueEntrada,
+.valueSaida {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.cardSaude {
+    background-color: bisque;
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    min-height: 110px;
+}
+
+.valueSaude {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 20px;
+}
+
+h5 {
+    margin: 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+}
+
+.navOpcoes {
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    gap: 50px;
+}
