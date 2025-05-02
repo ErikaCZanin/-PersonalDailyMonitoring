@@ -134,7 +134,7 @@ h3 {
 
 .pagEntrada {
     position: absolute;
-    display: none;
+    display: flex;
     background-color: aqua;
     justify-content: space-between;
     align-items: center;
@@ -145,6 +145,8 @@ h3 {
 }
 
 .cadastroEntrada {
+    display: flex;
+    flex-direction: column;
     width: 40%;
     padding: 30px;
 }
@@ -156,16 +158,6 @@ form button {
     cursor: pointer;
 }
 
-.mensagemEntrada {
-    display: flex;
-    flex-direction: column;
-    width: 60%;
-    background-color: rgb(41, 172, 172);
-    height: 540px;
-    border-radius: 8px 80px 8px 8px;
-    position: relative;
-    overflow: hidden;
-}
 
 .cadadastros {
     display: flex;
@@ -219,12 +211,6 @@ input {
 
 button {
     margin-top: 14px;
-}
-
-.mensagemEntrada {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .valuesEntrada,

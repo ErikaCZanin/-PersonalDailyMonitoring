@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./pagLogin.css">
+    <link rel="stylesheet" href="./main.css" type="text/css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="pagEntrada" id="telaEntrada">
+        <div class="mensagemEntrada">
+            <div class="heroTite">
+                <h1 class="mensagemBefore">Bem vindo!</h1>
+                <div id="tela" class="fade">
+                    <h1>Obrigado!</h1>
+                    <p>Você será redirecionado em instantes...</p>
+                  </div>
+            </div>
+            <div class="cadadastros">
+                +34 cadastros
+                <img src="https://placehold.co/50x50/EEE/31343C" alt="imgWeather">
+                <img src="https://placehold.co/50x50/EEE/31343C" alt="imgWeather">
+            </div>
+            <div class="icon"></div>
+            <div class="iconInferiordireito"></div>
+        </div>
+        <div class="cadastroEntrada">
+            <p>Agora iniciará uma trajetoria pessoal, aproveite!</p>
+            <h5>Agora vamos saber um pouco mais sobre você</h5>
+            <form>
+                <label for="nameU">Seu nome</label>
+                <input type="text" name="nameU" id="nameU">
+
+                <label for="numberEntrada">Total que recebeu</label>
+                <input type="number" name="numberEntrada" id="numberEntrada">
+
+                <label for="numberSaida">Total que saiu</label>
+                <input type="number" name="numberSaida" id="numberSaida">
+
+                <button type="button" onclick="go()">Cadastro</button>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="./main.js" ></script>
+</html>
