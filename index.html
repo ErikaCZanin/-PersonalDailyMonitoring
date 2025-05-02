@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./main.css">
     <title>Document</title>
 </head>
+
 <body>
     <div class="pagEntrada">
         <div class="mensagemEntrada">
-            <h1>Bem vindo!</h1>
+            <div class="heroTite">
+                <h1>Bem vindo!</h1>
+            </div>
             <div class="cadadastros">
                 +34 cadastros
+                <img src="https://placehold.co/50x50/EEE/31343C" alt="imgWeather">
                 <img src="https://placehold.co/50x50/EEE/31343C" alt="imgWeather">
             </div>
             <div class="icon"></div>
@@ -19,100 +24,113 @@
         </div>
         <div class="cadastroEntrada">
             <p>Agora iniciará uma trajetoria pessoal, aproveite!</p>
-        <h5>Agora vamos saber um pouco mais sobre você</h5>
-        <form> 
-            <label for="nameU">Seu nome</label>
-            <input type="text" name="nameU" id="nameU">
+            <h5>Agora vamos saber um pouco mais sobre você</h5>
+            <form>
+                <label for="nameU">Seu nome</label>
+                <input type="text" name="nameU" id="nameU">
 
-            <label for="numberEntrada">Total que recebeu</label>
-            <input type="number" name="numberEntrada" id="numberEntrada">
-        
-            <label for="numberSaida">Total que saiu</label>
-            <input type="number" name="numberSaida" id="numberSaida">
-        
-            <button type="button" onclick="go()">Cadastro</button>
-        </form> 
-        </div>       
+                <label for="numberEntrada">Total que recebeu</label>
+                <input type="number" name="numberEntrada" id="numberEntrada">
+
+                <label for="numberSaida">Total que saiu</label>
+                <input type="number" name="numberSaida" id="numberSaida">
+
+                <button type="button" onclick="go()">Cadastro</button>
+            </form>
+        </div>
     </div>
     <div class="container">
-    <div class="introPerfil">
+        <div class="introPerfil">
             <div class="introData">
-                <h4>Thursday, 29</h4>
+                <div class="date"></div>
                 <img src="https://placehold.co/150x150/EEE/31343C" alt="imgselfie">
-                <h4>10:34 PM</h4>
+                <div class="hours"></div>
             </div>
             <div class="introText">
                 <h1>Welcome Back</h1>
                 <h4>Hello Erika, how are you today?</h4>
             </div>
-    </div>
-    <div class="menu-motivacao">
-    <div class="motivacaoMensagem card">
-        <h4>the third month after Erika</h4>
-        <h1>Welcome to a new day!</h1>
-        <h4>Prophet's month of birth</h4>
-    </div>
-    <div class="cardFinanca card">
-        <div class="box">
-            <div class="box-circle">
-                <svg>
-                    <circle cx="70" cy="70" r="70"></circle>
-                    <circle id="circleProgress" cx="70" cy="70" r="70"></circle>
-                </svg>
+        </div>
+        <div class="menu-motivacao">
+            <div class="motivacaoMensagem card">
+                <h4>the third month after Erika</h4>
+                <h1>Welcome to a new day!</h1>
+                <h4>Prophet's month of birth</h4>
             </div>
-            <div class="number">
-            </div>
-        </div>
-        <div class="values">
-        <h1>18.000</h1>
-        <div class="value">
-        <div class="valuesEntrada">
-            <h3>Entrada</h3>
-            <div class="valueEntrada"></div>
-        </div>
-        <div class="valuesSaida">
-            <h3>Saida</h3>
-            <div class="valueSaida"></div>
-        </div>
-        </div>
-        </div>
-    </div>
-    </div>
-    <div class="menu-acomp">
-        <div class="cardWeather">
-            <div class="weather card">
-                <h4>Floripa</h4>
-                <img src="https://placehold.co/120x120/EEE/31343C" alt="imgWeather">
-           </div>
-           <div class="degree card">
-                 <h1>26º</h1>
-                 <h5>Maior parte do dia</h5>
-           </div>
-        </div>
-        <div class="cardSaude card">
-            <div class="agua valueSaude">
-                <h3>145</h3>
-                <h5>água</h5>
-            </div>
-            <div class="sono valueSaude">
-                <h3>145</h3>
-                <h5>sono</h5>
-            </div>
-            <div class="leitura valueSaude">
-                <h3>145</h3>
-                <h5>leitura</h5>
+            <div class="cardFinanca card">
+                <div class="box">
+                    <div class="box-circle">
+                        <svg>
+                            <circle cx="70" cy="70" r="70"></circle>
+                            <circle id="circleProgress" cx="70" cy="70" r="70"></circle>
+                        </svg>
+                    </div>
+                    <div class="number">
+                    </div>
+                </div>
+                <div class="values">
+                    <h1>18.000</h1>
+                    <div class="value">
+                        <div class="valuesEntrada">
+                            <h3>Entrada</h3>
+                            <div class="valueEntrada"></div>
+                        </div>
+                        <div class="valuesSaida">
+                            <h3>Saida</h3>
+                            <div class="valueSaida"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="nav">
-        <div class="navOpcoes card">
-            <div>Home</div>
-            <div>Finanças</div>
-            <div>Atividades</div> 
-            <div>Tempo</div>
+        <div class="menu-acomp">
+            <div class="cardWeather">
+                <div class="weather card">
+                    <h4>Floripa</h4>
+                    <img src="https://placehold.co/120x120/EEE/31343C" alt="imgWeather">
+                </div>
+                <div class="degree card">
+                    <h1>26º</h1>
+                    <h5>Maior parte do dia</h5>
+                </div>
+            </div>
+            <div class="cardSaude card">
+                <div class="agua valueSaude">
+                    <h3>145</h3>
+                    <div class="coluna">
+                        <div class="agua">
+                        </div>
+                    </div>
+                    <h5>água</h5>
+                </div>
+                <div class="sono valueSaude">
+                    <h3>145</h3>
+                    <div class="coluna">
+                        <div class="sono">
+                        </div>
+                    </div>
+                    <h5>sono</h5>
+                </div>
+                <div class="leitura valueSaude">
+                    <h3>145</h3>
+                    <div class="coluna">
+                        <div class="leitura">
+                        </div>
+                    </div>
+                    <h5>leitura</h5>
+                </div>
+            </div>
         </div>
-    </div>
+        <div class="nav">
+            <div class="navOpcoes card">
+                <div>Home</div>
+                <div>Finanças</div>
+                <div>Atividades</div>
+                <div>Configuração</div>
+            </div>
+        </div>
     </div>
 </body>
 <script src="./main.js"></script>
+
 </html>
