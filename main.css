@@ -132,18 +132,6 @@ h3 {
     text-align: center;
 }
 
-.pagEntrada {
-    position: absolute;
-    display: flex;
-    background-color: aqua;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 540px;
-    width: 800px;
-    left: 25%;
-    border-radius: 8px;
-}
-
 .cadastroEntrada {
     display: flex;
     flex-direction: column;
@@ -309,30 +297,31 @@ circle:nth-child(2) {
     background-color: gray;
     min-height: 90px;
     min-width: 40px;
-    border-radius: 8px;
+    border-radius: 24px;
     display: flex;
     justify-content: center;
     align-items: end;
-    padding-bottom: 6px;
+    padding: 6px 0;
 }
 
-.agua {
-    background-color: blue;
-    height: 40px;
+.aguaValue,
+.sono,
+.leitura {
     width: 30px;
-    border-radius: 8px;
+    border-radius: 24px;
+    height: auto;
+}
+
+.aguaValue {
+    background-color: blue;
 }
 
 .sono {
     background-color: purple;
     height: 40px;
-    width: 30px;
-    border-radius: 8px;
 }
 
 .leitura {
     background-color: orange;
     height: 40px;
-    width: 30px;
-    border-radius: 8px;
 }
