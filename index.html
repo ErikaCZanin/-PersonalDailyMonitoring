@@ -4,18 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
-    <title>Document</title>
+    <title>Home</title>
 </head>
 
 <body>
     <div class="container">
-        <div class="introPerfil">
+        <div class="introPerfil card">
             <div class="introData">
                 <div class="date"></div>
-                <div class="hours"></div>
+                <div class="hours">
+                    <div class="dateHour"></div>
+                    <div class="iconDay"></div>
+                </div>
             </div>
             <div class="introText">
                 <img src="https://placehold.co/130x130/EEE/31343C" alt="imgselfie">
@@ -41,14 +47,15 @@
                     </div>
                 </div>
                 <div class="values">
-                    <h1>18.000</h1>
+                    <div class="valueTotal">
+                    </div>
                     <div class="value">
                         <div class="valuesEntrada">
-                            <h3>Entrada</h3>
+                            <h1>Entrada</h1>
                             <div class="valueEntrada"></div>
                         </div>
                         <div class="valuesSaida">
-                            <h3>Saida</h3>
+                            <h1>Saida</h1>
                             <div class="valueSaida"></div>
                         </div>
                     </div>

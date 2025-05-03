@@ -5,12 +5,14 @@ function go() {
     var numberSaida = parseFloat(document.querySelector('#numberSaida').value);
 
     let somaGastos = (numberSaida / numberEntrada) * 100;
+    let valorFinal = numberEntrada - numberSaida
 
     const dadosCadastro = {
         NameUser: nomeUser,
         ValueEntry: numberEntrada,
         ValueExit: numberSaida,
-        SomaGastos: somaGastos
+        SomaGastos: somaGastos,
+        ValueFinal: valorFinal,
     };
 
     console.log(JSON.stringify(dadosCadastro, null, 2));
@@ -68,7 +70,7 @@ function updateDateTime() {
     const dateWithFullMonthName = monthNames[currentMonth];
     const ordinalDateWithDayOfWeek = daysOfWeek[currentDate.getDay()];
 
-    let periodIcon = currentHours >= 12 ? "bi bi-sun" : "bi bi-moon";
+    let periodIcon = currentHours >= 18 ?  "iconDay bi bi-moon" : "iconDay bi bi-sun";
     let period = "AM";
     if (currentHours >= 12) {
         period = "PM";
@@ -79,23 +81,22 @@ function updateDateTime() {
         currentHours -= 12;
     }
 
-    const icon = document.createElement('i');
+    const icon = document.querySelector('.iconDay')
     icon.className = periodIcon;
 
     const formattedMinutes = currentMinutes < 10 ? "0" + currentMinutes : currentMinutes;
 
     const dateFormat = dateWithFullMonthName + ' ' + currentDayOfMonth + ', ' + ordinalDateWithDayOfWeek;
 
-    const hoursElement = document.querySelector('.hours');
+    const hoursElement = document.querySelector('.dateHour');
     if (hoursElement && document.querySelector('.date')) {
         document.querySelector('.date').innerHTML = dateFormat;
         hoursElement.innerHTML = `${currentHours}:${formattedMinutes} `;
-        hoursElement.appendChild(icon);
     }
 } 
 document.addEventListener("DOMContentLoaded", function () {
     updateDateTime();
-    setInterval(updateDateTime, 1000);
+    setInterval(updateDateTime, 3000);
 });
 
 
@@ -109,6 +110,11 @@ if (dadosSalvos) {
     const numberEntrada = parseFloat(dadosSalvos["ValueEntry"]);
     const numberSaida = parseFloat(dadosSalvos["ValueExit"]);
     const numberSomaGastos = parseFloat(dadosSalvos["SomaGastos"]);
+    const numberTotalAtual = parseFloat(dadosSalvos["ValueFinal"]).toLocaleString('pt-BR', {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
+    });
+    
 
     if (numberEntrada > numberSaida) {
         circle.style.strokeDashoffset = 440 - (440 * numberSomaGastos) / 100;
@@ -116,9 +122,20 @@ if (dadosSalvos) {
         circle.style.strokeDashoffset = 0
     }
 
-    document.querySelector('.valueEntrada').innerText = numberEntrada;
-    document.querySelector('.valueSaida').innerText = numberSaida;
+    const numberEntradaFormatado = numberEntrada.toLocaleString('pt-BR', {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
+    });
+
+    const numberSaidaFormatado = numberSaida.toLocaleString('pt-BR', {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
+    });
+
+    document.querySelector('.valueEntrada').innerText = numberEntradaFormatado;
+    document.querySelector('.valueSaida').innerText = numberSaidaFormatado;
     document.querySelector('.number').innerText = `${numberSomaGastos} %`;
+    document.querySelector('.valueTotal').innerText = `R$ ${numberTotalAtual}`;
 
     // Exemplo se quiser mostrar no console
     console.log(`Bem-vindo, ${nomeUser}`);
@@ -234,7 +251,7 @@ async function fetchApiCity(urlCity) {
     console.log(url);
   
     // Atualiza a cada 60 segundos
-    setInterval(() => fetchApi(url), 1000);
+    setInterval(() => fetchApi(url), 3000);
   }
   
   
