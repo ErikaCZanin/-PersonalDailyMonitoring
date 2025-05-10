@@ -54,19 +54,21 @@
 .menu-activity .reading {
     display: grid;
     height: 100%;
-    background-color: rgb(219, 8, 219);
     display: grid;
     grid-template-areas:
     "cardDash cardDash livroSelect"
     "cardDash cardDash livroSelect"
     "listReading listReading listReading";
     grid-template-columns: 1fr 1fr 0.7fr;
-    grid-template-rows: 157px 157px 157px;
+    grid-template-rows: 157px 146px 157px;
 }
 
 .cardDash {
     grid-area: cardDash;
     background-color: blanchedalmond;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .livroSelect {
@@ -79,7 +81,6 @@
 }
 .listReading {
     grid-area: listReading;
-    background-color: yellow;
 }
 
 
@@ -126,9 +127,16 @@ td {
 }
 
 tr {
-    background-color: aqua;
     border-radius: 8px;
 }
+
+th,
+td {
+  border-top: 1px solid #9bafa9;
+  border-bottom: 1px solid #9bafa9;
+  padding: 8px 10px;
+}
+
 
 .listBook {
     height: 100%;
@@ -137,9 +145,52 @@ tr {
 
 .borderTd {
     border-radius: 8px 0 0 8px;
+    border-left: 1px solid #9bafa9
 }
+
+.box-circle-book {
+    height: 110px;
+    width: 110px;
+}
+
+.box-circle-book circle {
+    width: 150px;
+    height: 150px;
+    fill: none;
+    stroke: gray;
+    stroke-width: 10;
+    transform: translate(5px,5px);
+    stroke-dasharray: 440;
+    stroke-dashoffset: 0;
+}
+
+#circleReady {
+    stroke-dashoffset: 280;
+    stroke: rgb(41, 172, 41);
+}
+
+#circleReading {
+    stroke-dashoffset: 390;
+    stroke: blue;
+}
+
 
 
 .borderTdd {
     border-radius: 0 8px 8px 0;
+    width: 15%;
+    border-right: 1px solid #9bafa9;
+}
+
+.metricReading {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.box-circle-book svg {
+    display: flex;
+    height: 150px;
+    width: 150px;
+    position: relative;
 }
