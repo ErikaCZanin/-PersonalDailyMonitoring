@@ -1,0 +1,115 @@
+.introText h1,
+.introText h4 {
+    display: none;
+}
+
+
+.container {
+    display: grid;
+    grid-template-areas:
+    "introPerfil introPerfil introPerfil"
+    "menu-activitys menu-activity menu-activity"
+    "nav nav nav";
+    grid-template-columns: 0.3fr 1fr 1fr;
+    grid-template-rows: 100px 470px 60px;
+    height: 100%;
+    margin: 0 40px;
+    gap: 8px;
+}
+
+.introText img {
+    position: absolute;
+    border-radius: 50%;
+    margin-top: -140px;
+}
+
+.menu-activitys {
+    grid-area: menu-activitys;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-activity {
+    grid-area: menu-activity;
+}
+
+.menu-activity .water {
+    display: none;
+    height: 100%;
+    background-color: blue;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-activity .exercise {
+    display: none;
+    height: 100%;
+    background-color: green;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-activity .reading {
+    display: grid;
+    height: 100%;
+    background-color: rgb(219, 8, 219);
+    display: grid;
+    grid-template-areas:
+    "cardDash cardDash livroSelect"
+    "cardDash cardDash livroSelect"
+    "listREading listREading listREading";
+    grid-template-columns: 1fr 1fr 0.7fr;
+    grid-template-rows: 157px 157px 157px;
+}
+
+.cardDash {
+    grid-area: cardDash;
+    background-color: blanchedalmond;
+}
+
+.livroSelect {
+    grid-area: livroSelect;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.listREading {
+    grid-area: listREading;
+    background-color: yellow;
+}
+
+
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    font-size: 22px;
+}
+
+.opcoesActivitys {
+    border-radius: 20px;
+    padding: 14px;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+li:hover {
+    background-color: green;
+}
+
+li {
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+}
