@@ -1,0 +1,10 @@
+.introText h1,
+.introText h4 {
+    display: none;
+}
+
+.introText img {
+    position: absolute;
+    border-radius: 50%;
+    margin-top: -140px;
+}

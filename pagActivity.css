@@ -59,7 +59,7 @@
     grid-template-areas:
     "cardDash cardDash livroSelect"
     "cardDash cardDash livroSelect"
-    "listREading listREading listREading";
+    "listReading listReading listReading";
     grid-template-columns: 1fr 1fr 0.7fr;
     grid-template-rows: 157px 157px 157px;
 }
@@ -77,8 +77,8 @@
     justify-content: center;
     align-items: center;
 }
-.listREading {
-    grid-area: listREading;
+.listReading {
+    grid-area: listReading;
     background-color: yellow;
 }
 
@@ -112,4 +112,34 @@ li {
     padding: 8px;
     border-radius: 8px;
     cursor: pointer;
+}
+
+table {
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    border-spacing: 0 5px;
+}
+
+td {
+    text-align: center;
+}
+
+tr {
+    background-color: aqua;
+    border-radius: 8px;
+}
+
+.listBook {
+    height: 100%;
+    padding: 0 4px;
+}
+
+.borderTd {
+    border-radius: 8px 0 0 8px;
+}
+
+
+.borderTdd {
+    border-radius: 0 8px 8px 0;
 }

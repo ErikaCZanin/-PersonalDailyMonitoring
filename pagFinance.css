@@ -1,0 +1,32 @@
+.introText h1,
+.introText h4 {
+    display: none;
+}
+
+
+.container {
+    display: grid;
+    grid-template-areas:
+    "introPerfil"
+    "menu-container"
+    "nav";
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 470px 60px;
+    height: 100%;
+    margin: 0 40px;
+    gap: 8px;
+}
+
+.introText img {
+    position: absolute;
+    border-radius: 50%;
+    margin-top: -140px;
+}
+
+.menu-container {
+    grid-area: menu-container;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

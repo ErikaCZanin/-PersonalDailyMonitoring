@@ -83,10 +83,10 @@ h3 {
 .card {
     border-radius: 8px;
     box-shadow: 
-    -10px -10px 15px #D8E7E2, /* superior esquerdo */
-    -10px 10px 15px #C1D2CC,  /* inferior esquerdo */
+    -10px -10px 15px #d9e9e3, /* superior esquerdo */
+    -10px 10px 15px #b4c3be,  /* inferior esquerdo */
     10px -10px 15px #C6D4CF,  /* superior direito */
-    10px 10px 15px #A7BDB6;   /* inferior direito */
+    10px 10px 15px #9bafa9;   /* inferior direito */
 }
 
 .introPerfil {
@@ -94,10 +94,10 @@ h3 {
     border-radius: 8px;
     padding: 18px 24px;
     box-shadow: 
-    -10px -10px 15px #D8E7E2, /* superior esquerdo */
+    -10px -10px 15px #d9e9e3, /* superior esquerdo */
     -10px 10px 15px #bacbc5,  /* inferior esquerdo */
     10px -10px 15px #C6D4CF,  /* superior direito */
-    10px 10px 15px #a6bbb3;   /* inferior direito */
+    10px 10px 15px #9aada6;   /* inferior direito */
 }
 
 .introPerfil h1{
@@ -394,7 +394,6 @@ circle:nth-child(2) {
 }
 
 .coluna {
-    background-color: gray;
     min-height: 110px;
     min-width: 40px;
     border-radius: 24px;
@@ -402,6 +401,12 @@ circle:nth-child(2) {
     justify-content: center;
     align-items: end;
     padding: 6px 0;
+    border: solid 0.1px #d3e5df;
+    box-shadow: 
+    -4px -4px 15px #e1f2eb, /* superior esquerdo */
+    -10px 10px 15px #afc1bb,  /* inferior esquerdo */
+    10px -10px 15px #C6D4CF,  /* superior direito */
+    10px 10px 15px #98aaa4;   /* inferior direito */
 }
 
 .aguaValue,
