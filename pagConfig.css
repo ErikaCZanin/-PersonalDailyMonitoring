@@ -17,14 +17,78 @@
     gap: 8px;
 }
 
+.upProfileImg {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.dadosProfile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .introText img {
     position: absolute;
     border-radius: 50%;
     margin-top: -140px;
 }
 
+.profile {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    background-color: aqua;
+}
+
+.profile > div {
+    width: 50%;
+}
+
 .menu-container {
     grid-area: menu-container;
+    display: grid;
+    grid-template-areas: "configProfile configSessions";
+    grid-template-columns: 5.5fr 4.5fr ; 
+    grid-template-rows: 470px;
+    height: 100%;
+}
+
+.cardSessions {
+    background-color: aqua;
+    height: 120px;
+    width: 250px;
+    border-radius: 4px;
+}
+
+.Sessions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    height: auto;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
+
+.configProfile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: configProfile;
+    background-color: green; /* apenas para visualizar melhor */
+}
+
+.configSessions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: configSessions;
+    background-color: blue; /* apenas para visualizar melhor */
+}
+
+.imgProfile {
     display: flex;
     flex-direction: column;
     justify-content: center;

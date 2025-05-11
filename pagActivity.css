@@ -59,28 +59,67 @@
     "cardDash cardDash livroSelect"
     "cardDash cardDash livroSelect"
     "listReading listReading listReading";
-    grid-template-columns: 1fr 1fr 0.7fr;
-    grid-template-rows: 157px 146px 157px;
+    grid-template-columns: 1fr 1fr 0.6fr;
 }
 
 .cardDash {
     grid-area: cardDash;
-    background-color: blanchedalmond;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 20px;
 }
 
 .livroSelect {
     grid-area: livroSelect;
-    background-color: aqua;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
+.nameMetric {
+    position: absolute;
+    margin-top: 60px;
+}
+
+.discritBook {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 24px;
+    width: 80%;
+    height: 90%;
+    border-radius: 8px;
+    box-shadow: 
+    -5px -5px 12px #d9e9e3, /* superior esquerdo */
+    -10px 10px 15px #b4c3be,  /* inferior esquerdo */
+    10px -10px 15px #C6D4CF,  /* superior direito */
+    10px 10px 15px #9bafa9;   /* inferior direito */
+}
+
+.discritBook img {
+    border-radius: 8px;
+}
+
 .listReading {
     grid-area: listReading;
+}
+
+.progressRead {
+    height: 8px;
+    width: 130px;
+    background-color: gray;
+    border-radius: 18px;
+}
+
+.valueRead {
+    height: 8px;
+    width: 100px;
+    background-color: blue;
+    border-radius: 18px;
 }
 
 
@@ -149,13 +188,14 @@ td {
 }
 
 .box-circle-book {
-    height: 110px;
-    width: 110px;
+    height: 90px;
+    width: 90px;
+    padding: 12px;
 }
 
 .box-circle-book circle {
-    width: 150px;
-    height: 150px;
+    width: 90px;
+    height: 90px;
     fill: none;
     stroke: gray;
     stroke-width: 10;
@@ -184,13 +224,68 @@ td {
 
 .metricReading {
     display: flex;
-    width: 100%;
-    justify-content: space-between;
+    gap: 32px;
+    margin-right: 4px;
+    justify-content: center;
+    align-items: center;
 }
 
 .box-circle-book svg {
     display: flex;
-    height: 150px;
-    width: 150px;
+    height: 90px;
+    width: 90px;
     position: relative;
+}
+
+.cardMetric {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 114px;
+    width: 114px;
+    border-radius: 8px;
+    box-shadow: 
+    -10px -10px 15px #d2e3dd, /* superior esquerdo */
+    -10px 10px 15px #bacbc5,  /* inferior esquerdo */
+    10px -10px 15px #C6D4CF,  /* superior direito */
+    10px 10px 15px #9aada6;   /* inferior direito */
+}
+
+.allBooks {
+    display: flex;
+    justify-content: space-around;
+    margin-right: 4px;
+    align-items: center;
+}
+
+.imgBook {
+    height: 120px;
+    box-shadow:    
+    -10px 10px 15px #9aada6;
+    margin-bottom: 8px;
+}
+
+.categorys {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    height: 67px;
+}
+
+
+.cateory {
+    background-color: yellow;
+    padding: 2px;
+    border-radius: 4px;
+    text-align: center;
+    height: 25px;
+    width: 76px;
+    box-sizing: border-box;
+}
+
+.discritBook {
+    width: 80%;
+    height: 90%;
 }
