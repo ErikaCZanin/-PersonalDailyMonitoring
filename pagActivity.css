@@ -54,7 +54,6 @@
 .menu-activity .reading {
     display: grid;
     height: 100%;
-    display: grid;
     grid-template-areas:
     "cardDash cardDash livroSelect"
     "cardDash cardDash livroSelect"

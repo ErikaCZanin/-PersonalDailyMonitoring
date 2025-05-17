@@ -7,14 +7,34 @@
 .container {
     display: grid;
     grid-template-areas:
-    "introPerfil"
-    "menu-container"
-    "nav";
+        "introPerfil"
+        "menu-container"
+        "nav";
     grid-template-columns: 1fr;
     grid-template-rows: 100px 470px 60px;
     height: 100%;
     margin: 0 40px;
     gap: 8px;
+}
+
+.menu-container {
+    display: grid;
+    height: 100%;
+    grid-template-areas:
+        "opcoesFinanceiro graficoFin graficoFinAnual"
+        "opcoesFinanceiro listConta listContaFix";
+    grid-template-columns: 0.3fr 1.4fr 0.6fr;
+    grid-template-rows: 0.6fr 1fr;
+}
+
+.opFin {
+    border-radius: 20px;
+    height: 263px;
+    width: 92px;
+    display: flex;
+    padding: 0 14px;
+    align-items: center;
+    box-shadow: -10px -10px 15px #d9e9e3, -10px 10px 15px #b4c3be, 10px -10px 15px #C6D4CF, 10px 10px 15px #9bafa9;
 }
 
 .introText img {
@@ -23,10 +43,126 @@
     margin-top: -140px;
 }
 
-.menu-container {
-    grid-area: menu-container;
+li:hover {
+    background-color: green;
+}
+
+li {
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
     display: flex;
     flex-direction: column;
+    gap: 40px;
+    font-size: 22px;
+}
+
+.opcoesFinanceiro {
+    display: flex;
     justify-content: center;
     align-items: center;
+    grid-area: opcoesFinanceiro;
+}
+
+.graficoFin {
+    grid-area: graficoFin;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    gap: 44px;
+    align-items: center;
+}
+
+.graficoFinAnual {
+    grid-area: graficoFinAnual;
+    background-color: green;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.valueAnual {
+    height: 100%;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.valueAnual h5 {
+    margin: 0;
+}
+
+.valorAtual {
+    display: flex;
+    font-size: 50px;
+    gap: 14px;
+}
+
+.saldo {
+    padding: 14px;
+    border-right: solid 0.5px black;
+}
+
+.entrada {
+    padding: 14px;
+}
+
+.gasto {
+    background-color: white;
+    height: 150px;
+    width: 190px;
+}
+
+.listConta {
+    display: flex;
+    align-items: center;
+    grid-area: listConta;
+    background-color: purple;
+    padding-left: 4px;
+}
+
+.valorConta {
+    position: absolute;
+    top: 90px;
+    height: 70%;
+}
+
+.imgConta {
+    position: absolute;
+    top: -18px;
+    height:35%;
+    background-color: #9bafa9;
+    width: 70%;
+    border-radius: 8px;
+}
+
+.listContaFix {
+    grid-area: listContaFix;
+    background-color: pink;
+}
+
+.colMonth {
+    background-color: burlywood;
+    height: 60%;
+    border-radius: 40px;
+    width: 40%;
+}
+
+.cardConta{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 200px;
+    height: 240px;
+    border-radius: 8px;
 }

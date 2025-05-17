@@ -7,9 +7,9 @@
 .container {
     display: grid;
     grid-template-areas:
-    "introPerfil"
-    "menu-container"
-    "nav";
+        "introPerfil"
+        "menu-container"
+        "nav";
     grid-template-columns: 1fr;
     grid-template-rows: 100px 470px 60px;
     height: 100%;
@@ -25,10 +25,10 @@
 }
 
 .dadosProfile {
+    padding: 85px 8px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 8px;
+    gap: 14px;
 }
 
 h5 {
@@ -45,10 +45,9 @@ h5 {
     height: 100%;
     width: 100%;
     display: flex;
-    background-color: aqua;
 }
 
-.profile > div {
+.profile>div {
     width: 50%;
 }
 
@@ -56,7 +55,7 @@ h5 {
     grid-area: menu-container;
     display: grid;
     grid-template-areas: "configProfile configSessions";
-    grid-template-columns: 4.5fr 5.5fr; 
+    grid-template-columns: 4.5fr 5.5fr;
     grid-template-rows: 470px;
     height: 100%;
 }
@@ -65,18 +64,22 @@ h5 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: aqua;
     height: 140px;
     width: 280px;
     border-radius: 4px;
     padding: 8px;
-    gap: 8px
+    gap: 8px;
+    box-shadow: 
+    -10px -10px 15px #d9e9e3, /* superior esquerdo */
+    -10px 10px 15px #b4c3be,  /* inferior esquerdo */
+    10px -10px 15px #C6D4CF,  /* superior direito */
+    10px 10px 15px #9bafa9;   /* inferior direito */
 }
 
 .Sessions {
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 44px;
     height: auto;
     box-sizing: border-box;
     justify-content: center;
@@ -88,7 +91,7 @@ h5 {
     justify-content: center;
     align-items: center;
     grid-area: configProfile;
-    background-color: green; /* apenas para visualizar melhor */
+    /* apenas para visualizar melhor */
 }
 
 .configSessions {
@@ -96,7 +99,7 @@ h5 {
     justify-content: center;
     align-items: center;
     grid-area: configSessions;
-    background-color: blue; /* apenas para visualizar melhor */
+    /* apenas para visualizar melhor */
 }
 
 .imgProfile {
@@ -104,21 +107,29 @@ h5 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 8px;
+    gap: 14px;
+}
+
+.imgProfile img {
+    border-radius: 8px;
 }
 
 
 .imgCardAgua {
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    justify-content: center;
     height: 50px;
     width: 30%;
-    background-color: yellow;
 }
 
 .textCard {
     width: 70%;
 }
 
-h3, p {
+h3,
+p {
     margin: 0;
 }
 
@@ -150,6 +161,8 @@ h3, p {
     border-radius: 8px;
     font-size: 12px;
     cursor: pointer;
+    border: solid 1px #9eaca7;
+    margin: 0;
 }
 
 .upFoto {
@@ -159,6 +172,9 @@ h3, p {
     background-color: aliceblue;
     height: 50px;
     width: 40%;
+    border-style: dashed;
+    border-width: 2px;
+    border-color: #9eaca7
 }
 
 .upDoc {
@@ -168,4 +184,8 @@ h3, p {
     background-color: aliceblue;
     height: 50px;
     width: 70%;
+    gap: 8px;
+    border-style: dashed;
+    border-width: 2px;
+    border-color: #9eaca7
 }

@@ -70,7 +70,7 @@ function updateDateTime() {
     const dateWithFullMonthName = monthNames[currentMonth];
     const ordinalDateWithDayOfWeek = daysOfWeek[currentDate.getDay()];
 
-    let periodIcon = currentHours >= 18 ?  "iconDay bi bi-moon" : "iconDay bi bi-sun";
+    let periodIcon = currentHours >= 18 ?  "iconDay bi bi-sun" : "iconDay bi bi-moon";
     let period = "AM";
     if (currentHours >= 12) {
         period = "PM";
